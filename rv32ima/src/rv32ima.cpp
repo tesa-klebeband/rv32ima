@@ -2,15 +2,15 @@
 
 void RISC::initialize(char *filename)
 {
-    this->bus.ram.initialize(filename);
-    this->cpu.initialize();
+    bus.ram.initialize(filename);
+    cpu.initialize();
 }
 
 void RISC::run()
 {
     while(1)
     {
-        this->cpu.cycle(&bus);
+        cpu.cycle(&bus);
     }
 }
 
